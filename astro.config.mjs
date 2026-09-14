@@ -6,20 +6,6 @@ import webhookNotifier from "@emdash-cms/plugin-webhook-notifier";
 import { defineConfig, fontProviders } from "astro/config";
 import emdash from "emdash/astro";
 
-import { defineConfig } from 'astro/config';
-import emdash from 'emdash'; // of de juiste import
-
-export default defineConfig({
-  integrations: [
-    emdash({
-      auth: {
-        type: 'cloudflare-access',
-        audienceTag: process.env.CF_ACCESS_AUDIENCE || 'JOUW_AUD_TAG_HIER'
-      }
-    })
-  ]
-});
-
 export default defineConfig({
 	output: "server",
 	adapter: cloudflare(),
