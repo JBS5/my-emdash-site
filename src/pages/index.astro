@@ -10,7 +10,7 @@ import { getReadingTime } from "../utils/reading-time";
 import { resolveBlogSiteIdentity } from "../utils/site-identity";
 
 // Limit to what we render (e.g. 6 posts in the grid).
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 30;
 
 const [{ entries: posts, cacheHint }, settings] = await Promise.all([
 	getEmDashCollection("posts", {
